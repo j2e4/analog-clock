@@ -1,7 +1,7 @@
-import './ClockHand.css';
+import "./ClockHand.css";
 
 function ClockHand({ totalDegree, currentDegree }) {
-  const deg = currentDegree / totalDegree * 360;
+  const deg = (currentDegree / totalDegree) * 360;
 
   return (
     <div

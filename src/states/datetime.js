@@ -1,12 +1,12 @@
-import { atom, selector } from 'recoil';
+import { atom, selector } from "recoil";
 
 export const currentDateState = atom({
-  key: 'currentTime',
+  key: "currentTime",
   default: new Date(),
 });
 
 export const currentTimeUnitsState = selector({
-  key: 'currentTimeUnits',
+  key: "currentTimeUnits",
   get: ({ get }) => {
     const currentTime = get(currentDateState);
 

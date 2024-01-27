@@ -1,9 +1,9 @@
-import './Clock.css';
+import "./Clock.css";
 
-import { useEffect } from 'react';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { currentDateState, currentTimeUnitsState } from '../states/datetime';
-import ClockHand from './ClockHand';
+import { useEffect } from "react";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { currentDateState, currentTimeUnitsState } from "../states/datetime";
+import ClockHand from "./ClockHand";
 
 const CLOCK_HOURS = 12;
 const CLOCK_MINUTES = 60;
@@ -15,7 +15,7 @@ function Clock() {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentTime(date => new Date(date.getTime() + 1000));
+      setCurrentTime((date) => new Date(date.getTime() + 1000));
     }, 1000);
     return () => {
       clearTimeout(intervalId);
