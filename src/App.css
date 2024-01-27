@@ -4,3 +4,11 @@
   align-items: center;
   height: 100vh;
 }
+
+.clock + .portal .tooltip {
+  display: none;
+}
+
+.clock:hover + .portal .tooltip {
+  display: block;
+}
