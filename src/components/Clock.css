@@ -1,0 +1,19 @@
+.clock {
+  position: relative;
+  width: 50vw;
+  height: 50vw;
+  background-color: #e1dcd9;
+  border-radius: 100%;
+}
+
+.clock:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2vw;
+  height: 2vw;
+  background-color: #32435f;
+  border-radius: 100%;
+  content: "";
+}

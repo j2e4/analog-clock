@@ -1,3 +1,5 @@
+import './Clock.css';
+
 import { useEffect } from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { currentDateState, currentTimeUnitsState } from '../states/datetime';
@@ -21,30 +23,10 @@ function Clock() {
   }, [setCurrentTime]);
 
   return (
-    <div
-      style={{
-        position: 'relative',
-        width: '50vw',
-        height: '50vw',
-        backgroundColor: '#e1dcd9',
-        borderRadius: '100%',
-      }}
-    >
+    <div className="clock">
       <ClockHand totalDegree={CLOCK_HOURS} currentDegree={h} />
       <ClockHand totalDegree={CLOCK_MINUTES} currentDegree={m} />
       <ClockHand totalDegree={CLOCK_SECONDS} currentDegree={s} />
-      <div
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '2vw',
-          height: '2vw',
-          backgroundColor: '#32435f',
-          borderRadius: '100%',
-        }}
-      />
     </div>
   );
 }

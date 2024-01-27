@@ -1,0 +1,9 @@
+.clock-hand {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 25vw;
+  border: 1px solid #32435f;
+  box-sizing: border-box;
+  transform-origin: 0 100%;
+}
