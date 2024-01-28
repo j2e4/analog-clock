@@ -1,9 +1,46 @@
 .clock-hand {
   position: absolute;
-  top: 0;
-  left: 50%;
   height: 25vw;
-  border: 1px solid #32435f;
-  box-sizing: border-box;
+  left: 50%;
+  bottom: 50%;
   transform-origin: 0 100%;
+}
+
+.clock-hand::before {
+  position: absolute;
+  left: -1px;
+  bottom: 1px;
+  border-right: 1px solid #32435f;
+  border-left: 1px solid #32435f;
+  border-radius: 4px;
+  content: '';
+}
+
+.clock-hand::after {
+  position: absolute;
+  left: -2px;
+  bottom: 2.5vw;
+  border-right: 2px solid #32435f;
+  border-left: 2px solid #32435f;
+  border-radius: 4px;
+  content: '';
+}
+
+.hour-hand:before,
+.minute-hand:before {
+  border-top: 2.5vw solid #32435f;
+}
+
+.hour-hand:after {
+  border-top: 15vw solid #32435f;
+}
+
+.minute-hand:after {
+  border-top: 20vw solid #32435f;
+}
+
+.second-hand:before {
+  border-top: 22.5vw solid orange;
+  border-right: 1px solid orange;
+  border-left: 1px solid orange;
 }
